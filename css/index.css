@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "宋体";
-    background-color: #E3E4E5;
+    background-color: white;
 }
 #header .loginJD{
     background-color: white;
@@ -91,7 +91,11 @@
     background-color: white;
     color: #999999;
 }
-.deng a:hover{
+.deng .saoma a:hover{
+    color: red;
+    font-weight: 700;
+}
+.deng .zhanghu a:hover{
     color: red;
     font-weight: 700;
 }
@@ -105,3 +109,102 @@
     line-height: 60px;
     border-bottom: 1px solid #f4f4f4;
 }
+
+
+#formlogin{
+    background-color: white;
+}
+.code img{
+    width: 147px;
+    height: 147px;
+}
+#formlogin .open_1 ul{
+    text-align: center;
+}
+#formlogin .open_1 ul li{
+    list-style-type: none;
+    display: inline;
+    background-color: white;
+    font-size: 12px;
+}
+#formlogin .open_1 ul li a{
+    color: red;
+}
+
+#formlogin .open_2 ul{
+    text-align: center;
+}
+#formlogin .open_2 ul li{
+    list-style-type: none;
+    display: inline;
+    background-color: white;
+    font-size: 12px;
+    padding-left: 30px;
+}
+#formlogin .open_2 ul li img{
+    background-color: white;
+    position: relative;
+    top:10px;
+}
+
+ul{
+    background-color: white;
+}
+#formlogin .coagent{
+    width: 100%;
+    height: 50px;
+    background-color: #666666;
+    position: absolute;
+    top:365px;
+    border-top: 1px solid #f4f4f4;
+}
+#formlogin .coagent ul li{
+    list-style-type: none;
+    display: inline;
+    line-height: 50px;
+    position: relative;
+    left:20px;
+}
+#formlogin .coagent li a{
+    font-size: 12px;
+    background-color: white;
+    padding-left:8px;
+}
+#formlogin .coagent li a span{
+    padding-left:10px;
+}
+#formlogin .coagent li img{
+    width: 15px;
+    height:15px;
+    position: relative;
+    top:5px;
+}
+#formlogin .coagent ul .liji{
+    display: inline-block;
+    position: relative;
+    left:160px;
+}
+#formlogin .coagent ul .liji a{
+    font-size:14px;
+    color:red;
+}
+#formlogin .coagent ul .liji a:hover{
+    text-decoration: underline;
+}
+#formlogin .coagent .liji .gt{
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    border-radius:50%;
+    background-color: red;
+    position: relative;
+    top:2px;
+    left:13px;
+}
+
+
