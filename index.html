@@ -10,8 +10,11 @@
     <meta name="x5-fullscreen" content="true">
     <link rel="dns-prefetch" href="//cangdu.org">
     <link rel="dns-prefetch" href="//elm.cangdu.org">
-    <title>京东</title>
+    <title>京东-欢迎登录</title>
     <link type="text/css" rel="stylesheet" href="css/index.css" />
+    <link type="text/css" rel="stylesheet" href="css/common.css" />
+    <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+  </head>
   <body>
     <!-- 头部 -->
     <div id="header">
@@ -36,10 +39,10 @@
         </div>
         <div class="deng">
           <span class="span">京东不会以任何理由要求您转账汇款，谨防诈骗。</span>
-          <div class="saoma"><a href="#">扫码登录</a></div>
-          <div class="zhanghu"><a href="#">账户登录</a></div>
+          <div class="saoma"><a href="javascript:void(0)" id="saomadenglu">扫码登录</a></div>
+          <div class="zhanghu"><a href="javascript:void(0)" id="zhanghudenglu">账户登录</a></div>
           <div style="background-color: white;"><br/></div>
-          <div class="yanzheng">
+          <div class="yanzheng" onshow="yanzhang()">
             <form name="formlogin" id="formlogin" method="POST" action="">
               <div class="code" style="text-align: center;background-color: white;">
                 <img src="img/code.jpg" />
@@ -65,9 +68,54 @@
                 </ul>
               </div>
             </form>
+
+            <form name="formlogin2" id="formlogin2" method="POST" action="" style="display: none;">
+              <div class="suredeng">
+                <input type="text" placeholder="邮箱/用户名/登录手机" name="userName" id="userName" 
+                      style="background: url(img/denglu.png) no-repeat; padding-left: 45px;" maxlength="60"/>
+              </div>
+              <div class="mima">
+                <input type="password" placeholder="密码" name="password" id="password" 
+                      style="background: url(img/mima.png) no-repeat;padding-left: 45px;" maxlength="30"/>
+              </div>
+              <div class="wangjipwd">
+                <span><a href="#">忘记密码</a></span>
+              </div>
+              <div class="register" style="margin-top:40px; text-align: center;">
+                <input type="submit" value="登录"/>
+              </div>
+              <div class="coagent">
+                <ul>
+                  <li><a href="#"><img src="img/qq.jpg" /><span>QQ</span></a></li>
+                  <li><a href="#"><img src="img/weixin.jpg" /><span>微信</span></a></li>
+                  <li class="liji"><span class="gt">&gt;</span><a href="#"><span>立即注册</span></a></li>
+                </ul>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      var saomao = document.getElementById("saomadenglu");
+      var zhanghu = document.getElementById("zhanghudenglu");
+      var formlogin = document.getElementById("formlogin");
+      var formlogin2 = document.getElementById("formlogin2");
+      // 加载时，默认选中
+      // function fload(){
+      //   saomao.setAttribute("style","color:red; font-weight:700;");
+      // }
+      saomao.onclick = function(){
+        formlogin2.style.display="none";
+        formlogin.style.display="block";
+      }
+      zhanghu.onfocus = function(){
+        formlogin.style.display="none";
+        formlogin2.style.display="block";
+      }
+      
+      // window.location
+    </script>
   </body>
 </html>
